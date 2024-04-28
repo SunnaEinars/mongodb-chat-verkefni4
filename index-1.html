@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <style>
+    </style>
+</head>
+  <body>
+
+    <div class="site-title">
+        <h1>Ultra Mega Awesome Chat</h1>
+    </div>
+    <div class="rooms-container">
+        <div class="rooms-available">
+            <ul class="available-rooms">
+                <li><button class="room-button">room</button></li>
+            </ul>
+
+        </div>
+        <div id="roomCreation">
+            <input type="text" id="newRoomName" placeholder="Room Name"/>
+            <button id="createRoom">Create Room</button>
+        </div>
+    </div>
+    <div class="this-rooms-container">
+        <div class="chat-container">
+            <ul id="messages"></ul>
+            <form id="form" action="">
+            <input id="input" autocomplete="off" /><button>Send</button>
+            </form>
+        </div>
+        <div class="this-room-sidebar">
+            <h3>Current Room</h3>
+            <div class="current-room"></div>
+            <h3>Active users</h3>
+            <div class="current-users"></div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
